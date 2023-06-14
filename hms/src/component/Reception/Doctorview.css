@@ -1,0 +1,120 @@
+.dt-view{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dt-box{
+    width: 35%;
+    height: 10rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px 2px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 1rem;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+.dc-icon{
+    width: 40%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dc-icon i{
+    font-size: 6rem;
+    color: #5fcf80;
+}
+.dc-details{
+    width: 60%;
+    height: 100%;
+    background: #5fcf80;
+    color: white;
+    border-radius:17px 0 0  17px ;
+}
+.dc-name{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 2rem;
+}
+.dc-data{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-align: center;
+}
+/* search  */
+
+.search-bar{
+    position: fixed;
+    width: 37%;
+    margin-top: 2rem;
+    z-index: 100;
+}
+.search-bar .search-box{
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 7px;
+    border: 1.5px solid #5fcf80;
+    position: relative;
+    padding: 0 0 0 3rem;
+    font-weight: 600;
+    font-size: 18px;
+    outline: none;
+    color: #5fcf80;
+}
+input::placeholder{
+    color: #5fcf80;
+}
+.search-bar i{
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    font-size: 26px;
+    color: #5fcf80;
+}
+.search-bar input:focus{
+    border: 2.4px solid #5fcf80;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        margin-top: 1rem;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1; 
+        margin-top: 2rem;    
+        transform: translateY(2rem);
+     }
+}
+
+@media(max-width:768px){
+    .dt-box{
+        width: 75%;
+        margin-top: 1rem;
+    }
+    .search-bar{
+        margin-top: 1rem !important;
+        width: 33% !important;
+        margin-left: 2rem;
+    }
+    .search-bar .search-box{
+        height: 2rem !important;
+        font-size: 14px !important;
+    }
+    .search-bar i{
+        font-size: 18px !important;
+    }
+}
